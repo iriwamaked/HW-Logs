@@ -7,7 +7,7 @@ import itstep.learning.servlets.*;
 public class WebModule extends ServletModule{
     @Override
     protected void configureServlets(){
-
+        //регистрируем фильтры
         filter("/*").through(CharsetFilter.class);
         filter("/*").through(LogFilter.class);
 
@@ -16,6 +16,7 @@ public class WebModule extends ServletModule{
         serve("/").with(HomeServlet.class);
         serve("/db").with(DbServlet.class);
         serve("/logs").with(LogServlet.class);
+        serve("/generator").with(GeneratorServlet.class);
     }
 }
 

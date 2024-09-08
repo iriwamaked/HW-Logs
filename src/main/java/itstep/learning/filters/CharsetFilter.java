@@ -21,7 +21,7 @@ public class CharsetFilter implements Filter {
 
         System.out.println("Filter works");
 
-        //Передача работі следующему фильтру/сервлету
+        //Передача работы следующему фильтру/сервлету
         chain.doFilter(servletRequest, servletResponse);
         //обратный ход (от сервлета к серверу)
 
