@@ -24,4 +24,18 @@
   <% for (int a:arr){%>
     <span>element = <%=a%></span> &emsp;
 <%}%>
-
+<form id="signup-form" action="<%=contextPath%>/user">
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Name</span>
+    <input name="userName" type="text" class="form-control" placeholder="Name">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon2">Email</span>
+    <input name="userEmail" type="text" class="form-control" placeholder="Email">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon3">Password</span>
+    <input name="userPassword" type="password" class="form-control">
+</div>
+<button class="btn btn-primary">Sign Up</button>
+</form>
