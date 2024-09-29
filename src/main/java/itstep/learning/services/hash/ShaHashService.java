@@ -24,5 +24,12 @@ public class ShaHashService implements HashService{
         }
 
     }
+
+    @Override
+    public boolean matches(String rawPassword, String hashedPassword){
+            String hashedRawPassword = digest(rawPassword);
+            return hashedRawPassword.equals(hashedPassword);
+
+    }
 }
 

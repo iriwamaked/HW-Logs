@@ -14,9 +14,9 @@ public class WebModule extends ServletModule{
         //Решение проблемы - нужны не все, а некоторые, внутрь передаем регулярное выражение
         //то есть будет проходить все, кроме
         //filterRegex - исключаем из фильтра сss/ и js/ и img/
-        filter("/*").through(CORSFilter.class);
-        filterRegex("^/(?!css/.*|js/.*|img/.*).*$").through(CharsetFilter.class);
 
+        filterRegex("^/(?!css/.*|js/.*|img/.*).*$").through(CharsetFilter.class);
+        filter("/*").through(CORSFilter.class);
         filterRegex("^/(?!css/.*|js/.*|img/.*).*$").through(LogFilter.class);
 
         //and servlets
@@ -25,6 +25,8 @@ public class WebModule extends ServletModule{
         serve("/logs").with(LogServlet.class);
         serve("/generator").with(GeneratorServlet.class);
         serve("/user").with(UserServlet.class);
+        serve("/userauthentification").with(UserAuthentificationServlet.class);
+        serve("/userList").with(UserListServlet.class);
     }
 }
 

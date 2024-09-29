@@ -33,9 +33,11 @@
     <span class="input-group-text" id="basic-addon2">Email</span>
     <input name="userEmail" type="text" class="form-control" placeholder="Email">
 </div>
+    <div id="error-message" style="color: red; display: none;"></div>
 <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon3">Password</span>
     <input name="userPassword" type="password" class="form-control">
 </div>
 <button class="btn btn-primary">Sign Up</button>
+    <div id="success-message" style="color: green; display: none;"></div>
 </form>

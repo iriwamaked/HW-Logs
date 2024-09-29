@@ -25,4 +25,9 @@ public class Md5HashService implements HashService{
         }
 
     }
+
+    public boolean matches(String rawPassword, String hashedPassword){
+            String hashedRawPassword = digest(rawPassword);
+            return hashedRawPassword.equals(hashedPassword);
+    }
 }
